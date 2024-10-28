@@ -25,3 +25,7 @@ I generated the project of the zip file `project-generated-with-initializr.zip` 
 ```
 server.port=8082
 ```
+
+When accessing the basic application, I saw this page:
+
+![logon page](images/logon-page.png)
