@@ -16,3 +16,12 @@ Related to the content of the `header` and the `payload` you cam see this exampl
 ![header example - JWT](images/header-example.png)
 
 ![payload example - JWT](images/payload-example.png)
+
+
+## Basic project
+
+I generated the project of the zip file `project-generated-with-initializr.zip` (that is in the root directory), extracted the bolierplate in the root directory and created the file `application.properties` with this content:
+
+```
+server.port=8082
+```
