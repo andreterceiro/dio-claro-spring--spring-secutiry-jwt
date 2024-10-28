@@ -34,3 +34,19 @@ server.port=8082
 When accessing the basic application, I saw this page:
 
 ![logon page](images/logon-page.png)
+
+
+## JWT dependency
+
+I added a dependency related to JWT this way under depenencies in `pom.xml`:
+
+```
+		<!-- JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>	
+```
+
+Pay attention that artifactId is "jjwt".
