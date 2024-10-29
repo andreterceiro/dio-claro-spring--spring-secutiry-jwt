@@ -213,4 +213,7 @@ UserController:
 - have the annotation "@RestController";
 - have the annotation "@RequestMapping(/users/)"
 - have the UserService `autowired`;
-- have the annotation `@PostMapping` in one method;
+- have the annotation `@PostMapping` in one method.
+
+A `JWT` token (mapped to an object) in the header will deal with the authentication. We do this in the next steps.
+
