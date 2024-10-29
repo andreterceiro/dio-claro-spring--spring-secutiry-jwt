@@ -260,3 +260,56 @@ Some problems ocurred when creating the `WebSecurityConfig.java` class under the
 I ercord this [another video](https://youtu.be/3OHM_7OLfvI) about trying to solve the problem. As I do not solved the problem, I will not test the final solution.
 
 About switching Java versions: [link](https://askubuntu.com/questions/740757/switch-between-multiple-java-versions)
+
+In the rest of the class teacher removed an tag relating to runtime and H2 database and commented some things of the `WebSecurityConfig`, as example:
+
+- He commented that this annotation is related to the class be related to the cryptography process. I understood that `@Configuration` is not related only to cryptography thins, but I unerstood the whole idea.
+
+```
+@Configuration
+@EnableWebSecurity
+```
+
+- He commented that here we enabled the cryptography class:
+
+```
+    @Bean
+    public BCryptPasswordEncoder encoder(){
+        return new BCryptPasswordEncoder();
+    }
+```
+
+- And that here we created a whitelist of routes be used by Swagger:
+
+```
+    private static final String[] SWAGGER_WHITELIST = {
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**"
+    };
+```
+
+And here we configure the roles (or not if a rout is public) related to the resources allowed to access:
+
+```
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.headers().frameOptions().disable();
+        http.cors().and().csrf().disable()
+                .addFilterAfter(new JWTFilter(), UsernamePasswordAuthenticationFilter.class)
+                .authorizeRequests()
+                .antMatchers(SWAGGER_WHITELIST).permitAll()
+                .antMatchers("/h2-console/**").permitAll()
+                .antMatchers(HttpMethod.POST,"/login").permitAll()
+                .antMatchers(HttpMethod.POST,"/users").permitAll()
+                .antMatchers(HttpMethod.GET,"/users").hasAnyRole("USERS","MANAGERS")
+                .antMatchers("/managers").hasAnyRole("MANAGERS")
+                .anyRequest().authenticated()
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+    }
+```
