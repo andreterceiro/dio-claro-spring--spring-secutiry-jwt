@@ -256,3 +256,5 @@ This import verifies the integrity of the token on **every** request. it interce
 Some problems ocurred when creating the `WebSecurityConfig.java` class under the `security` package. Please see what I did trying to solve the problem:
 
 [Video about I am trying to solve some problems in the project](https://youtu.be/lh1DpzejopQ)
+
+I ercord this [another video](https://youtu.be/3OHM_7OLfvI) about trying to solve the problem. As I do not solved the problem, I will not test the final solution.
