@@ -233,3 +233,9 @@ security.config.expiration=3600000
 ```
 
 Please see the mapping the prefix `security.config` to the annotation - `@ConfigurationProperties(prefix = "security.config")`
+
+You can change this line to have a token relatedd to your application:
+
+```
+security.config.key=SECRET_KEY
+```
