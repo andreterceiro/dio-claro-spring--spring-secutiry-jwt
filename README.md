@@ -215,5 +215,7 @@ UserController:
 - have the UserService `autowired`;
 - have the annotation `@PostMapping` in one method.
 
-A `JWT` token (mapped to an object) in the header will deal with the authentication. We do this in the next steps.
+A `JWT` token (mapped to an object) **in the header of the request** will deal with the authentication. We do this in the next steps.
+
+Now we created the class JWTObject in the secutiry package. This class do not have any annotations.
 
