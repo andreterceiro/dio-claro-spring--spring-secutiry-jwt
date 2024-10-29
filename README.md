@@ -217,5 +217,5 @@ UserController:
 
 A `JWT` token (mapped to an object) **in the header of the request** will deal with the authentication. We do this in the next steps.
 
-Now we created the class JWTObject in the secutiry package. This class do not have any annotations.
+Now we created the class JWTObject in the secutiry package. This class do not have any annotations. This class is related to the conversion `token` to `object` and `object` to `token`.
 
