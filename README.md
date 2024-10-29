@@ -201,3 +201,9 @@ import javax.persistence.*;
 You can easily find more information searching in the Internet.
 
 One important question: when I added (as techer teached) a repository, I added an interface and not a class.
+
+Until now I created a `model`, a `repository` and a `service`. Please see the classes under the folder `src`. Comments:
+-  The `model` User have characteristics of a `bean`, like having `getters` and `setters`. Have some annotations related to databse constraints, but a model is have not the main propouse of connect to a database. Besides other annotations, have the annotations '@Entity' and
+'@Table(name = "tab_user")'. Have an annotation to specify that a value is a generated value;
+- The `repository` UserRepository have the objective of connect to a database. In the example of this project is an interface that extends JPARepository<User, Integer> (format of the generics: <Model, type of id field>). Uses the model `User`, but this class is not autowired (nor instantiated). Remeber, this file is an **interface**. Do not have a special annotation, but, again, is an **interface** that extends `JPARepository`; 
+- The `service` UserService uses the UserRepository (autowired). Its main objective is to encrypt the password and its uses the `repository` to make the persistence. Have the annotation `@Service`.
