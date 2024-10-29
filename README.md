@@ -224,3 +224,12 @@ Then we created the class SecurityConfig object also in the security package. Th
 - @Configuration
 - @ConfigurationProperties(prefix = "security.config")
 
+Now we inserted this informations in `application.properties`:
+
+```
+security.config.prefix=Bearer
+security.config.key=SECRET_KEY
+security.config.expiration=3600000
+```
+
+Please see the mapping the prefix `security.config` to the annotation - `@ConfigurationProperties(prefix = "security.config")`
