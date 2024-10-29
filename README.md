@@ -199,3 +199,5 @@ import javax.persistence.*;
 ```
 
 You can easily find more information searching in the Internet.
+
+One important question: when I added (as techer teached) a repository, I added an interface and not a class.
