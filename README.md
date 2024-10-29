@@ -115,4 +115,4 @@ DAO (Data Access Object) e Repository são conceitos que têm algumas semelhanç
 Embora DAO e Repository possam ser usados para propósitos semelhantes (acesso a dados), o Repository é geralmente mais orientado ao domínio e à lógica de negócios, enquanto o DAO é mais técnico e se concentra na implementação do acesso a dados. Em muitos casos, eles podem coexistir em uma aplicação, com o DAO lidando com a persistência e o Repository servindo como uma camada de abstração adicional.
 ```
 
-[class](https://web.dio.me/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/4e65bb58-8aa2-4e26-868d-d9b37d662638?back=/track/coding-the-future-claro-java-spring-boot&tab=undefined&moduleId=undefined) - 2 minutes and 7 seconds"
+I read this [interesting Stackoverflow post](https://pt.stackoverflow.com/questions/22444/o-que-%C3%A9-e-para-que-serve-um-java-bean) talking about beans.
