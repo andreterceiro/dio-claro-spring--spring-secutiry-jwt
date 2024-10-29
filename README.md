@@ -252,3 +252,7 @@ import jakarta.servlet.http.HttpServletResponse;
 ```
 
 This import verifies the integrity of the token on **every** request. it intercepts the request data, validates the token and generated the `JWTObject`. Then if its all "ok", it creates an object of the type `UsernamePasswordAuthenticationToken` and adds it to the context. In case of a problem, an exception is thrown.
+
+Some problems ocurred when creating the `WebSecurityConfig.java` class under the `security` package. Please see what I did trying to solve the problem:
+
+[Video about I am trying to solve some problems in the project](https://youtu.be/lh1DpzejopQ)
