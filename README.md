@@ -251,4 +251,4 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 ```
 
-This import verifies the integrity of the token on **every** request. it intercepts the request data, validates the token and generated the `JWTObject`. Then if its all "ok", it creates an object of the type `UsernamePasswordAuthenticationToken` and adds it to the context.
+This import verifies the integrity of the token on **every** request. it intercepts the request data, validates the token and generated the `JWTObject`. Then if its all "ok", it creates an object of the type `UsernamePasswordAuthenticationToken` and adds it to the context. In case of a problem, an exception is thrown.
