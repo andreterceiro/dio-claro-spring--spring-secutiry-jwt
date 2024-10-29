@@ -219,3 +219,8 @@ A `JWT` token (mapped to an object) **in the header of the request** will deal w
 
 Now we created the class JWTObject in the secutiry package. This class do not have any annotations. This class is related to the conversion `token` to `object` and `object` to `token`.
 
+Then we created the class SecurityConfig object also in the security package. This class reads configurations from `application.properties`, not configurations about a specific token, but configurations related to the encrypt process. It does not uses directly the JWTObject class and have the annotations:
+
+- @Configuration
+- @ConfigurationProperties(prefix = "security.config")
+
