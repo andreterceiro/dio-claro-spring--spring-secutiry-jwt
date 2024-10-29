@@ -250,3 +250,5 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 ```
+
+This import verifies the integrity of the token on every request.
