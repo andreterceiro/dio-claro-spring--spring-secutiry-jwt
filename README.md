@@ -207,3 +207,10 @@ Until now I created a `model`, a `repository` and a `service`. Please see the cl
 '@Table(name = "tab_user")'. Have an annotation to specify that a value is a generated value;
 - The `repository` UserRepository have the objective of connect to a database. In the example of this project is an interface that extends JPARepository<User, Integer> (format of the generics: <Model, type of id field>). Uses the model `User`, but this class is not autowired (nor instantiated). Remeber, this file is an **interface**. Do not have a special annotation, but, again, is an **interface** that extends `JPARepository`; 
 - The `service` UserService uses the UserRepository (autowired). Its main objective is to encrypt the password and its uses the `repository` to make the persistence. Have the annotation `@Service`.
+
+UserController:
+
+- have the annotation "@RestController";
+- have the annotation "@RequestMapping(/users/)"
+- have the UserService `autowired`;
+- have the annotation `@PostMapping` in one method;
