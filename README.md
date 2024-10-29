@@ -240,4 +240,4 @@ You can change this line to have a token relatedd to your application:
 security.config.key=SECRET_KEY
 ```
 
-Then we created the service JWTCreator class, who deals with the token creation based on an object or get the token created on a previous momment, convert it on an object and validated it.
+Then we created the service JWTCreator class, who deals with the token creation based on an object or get the token created on a previous momment, convert it on an object and validated it. It class deals with the interaction of the Spring Security and the JWT mechanism.
