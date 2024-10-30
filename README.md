@@ -313,3 +313,5 @@ And here we configure the roles (or not if a rout is public) related to the reso
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 ```
+
+About the last class of the course, I made [this video](https://youtu.be/AMKGoo2Zmbo).
